@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css?family=Bangers');
+*,*::before,*::after{
+  margin:0;
+  box-sizing:border-box;
+}
+
+html,body{
+  height:100%;
+  width:100%;
+}
+
+body{
+  font-size:5vmin;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: linear-gradient(135deg, #095cd7 0%, #c3cfe2 100%);
+  font-family: 'Bangers', cursive;
+  background-image: url(d.png);
+
+  
+  
+
+
+}
+
+.card{
+  height: 30rem;
+  width: 30rem;
+  transform-style:preserve-3d;
+  position: relative;
+  transition: all 1s ease-in-out;
+  backface-visibility: hidden;
+  margin:10px;
+}
+
+.front{
+  position: absolute;
+  backface-visibility: hidden;
+  background-image: url(happy.png);
+  
+   height:350px;
+   width:495px;
+  
+  
+
+  border-radius:1em;
+  display:flex;
+  justify-content: center;
+  align-items:center;
+  transform-style:preserve-3d;
+  color: #fff;
+  perspective: 1000px;
+  box-shadow: 2px 4px 8px 1px rgba(black,0.4);
+  
+}
+
+
+.back{
+  transform: rotateY( 180deg );
+  background-image: url(my.png);
+ 
+  position: absolute;
+ backface-visibility: hidden;
+  
+  height:350px;
+  width:495px;
+  border-radius:1em;
+  display:flex;
+  justify-content: center;
+  align-items:center;
+  transform-style:preserve-3d;
+  color: #fff;
+  perspective: 1000px;
+  box-shadow: 2px 4px 8px 1px rgba(black,0.4);
+}
+
+.front > p , .back > p {
+  transform:translateZ(120px);
+  
+}
+
+.card:hover{
+  transform:rotateY(180deg);
+}
